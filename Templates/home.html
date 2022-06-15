@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Wine_Quality_Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+  <form action='/predict' method="post">
+     <input type="text" name="fixedAcidity" placeholder="fixed acidity" required="required" /></br>
+     <input type="text" name="volatileAcidity" placeholder="volatile acidity " required="required" /></br>
+     <input type="text" name="citricAcid" placeholder="citric acid" required="required" /></br>
+     <input type="text" name="residualSugar" placeholder="residual sugar " required="required" /></br>
+     <input type="text" name="chlorides" placeholder="chlorides " required="required" /></br>
+     <input type="text" name="freeSulfurDioxide" placeholder="free sulfur dioxide" required="required" /></br>
+     <input type="text" name="totalSulfurDioxide" placeholder="total sulfur dioxide" required="required" /></br>
+     <input type="text" name="density" placeholder="density" required="required" /></br>
+     <input type="text" name="pH" placeholder="pH   " required="required" /></br>
+     <input type="text" name="sulphates" placeholder="sulphates" required="required" /></br>
+     <input type="text" name="alcohol" placeholder="alcohol" required="required" /></br>
+     <br>
+     <br>
+     <input type="submit" class="btn btn-primary btn-block btn-large" onclick="{{ url_for('predict') }}" value="predict"/>
+     
+  </form>
+  
+
+   <br>
+   <br>
+  </div>
+ {{prediction_text}}
+
+</body>
+</html>
