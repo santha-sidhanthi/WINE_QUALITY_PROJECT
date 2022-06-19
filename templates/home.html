@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+   
+   <head>
+      <meta charset="UTF-8">
+      <title>ML API</title>
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <style>
+         input[type=text], select {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid rgb(38, 167, 160);
+            border-radius: 2px;
+            box-sizing: border-box;
+            }
+
+         input[type=submit] {
+            width: 10%;
+            background-color: rgb(207, 58, 4);
+            color: rgba(15, 5, 203, 0.855);
+            padding: 14px 20px;
+            margin: 3px 0;
+            border-style: solid;  
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+      </style>
+   </head>
+   <body style="background-color:rgb(9, 147, 160);">
+      <h1 style="color:black"> Enter the specified values, and the quality of wine will be predicted. </h1>
+      <div>
+         <form action="/result" method="post">
+            <input type="text" name="fixedAcidity" placeholder="fixed acidity" required="required" /></br>
+            <input type="text" name="volatileAcidity" placeholder="volatile acidity " required="required" /></br>
+            <input type="text" name="citricAcid" placeholder="citric acid" required="required" /></br>
+            <input type="text" name="residualSugar" placeholder="residual sugar " required="required" /></br>
+            <input type="text" name="chlorides" placeholder="chlorides " required="required" /></br>
+            <input type="text" name="freeSulfurDioxide" placeholder="free sulfur dioxide" required="required" /></br>
+            <input type="text" name="totalSulfurDioxide" placeholder="total sulfur dioxide" required="required" /></br>
+            <input type="text" name="density" placeholder="density" required="required" /></br>
+            <input type="text" name="pH" placeholder="pH   " required="required" /></br>
+            <input type="text" name="sulphates" placeholder="sulphates" required="required" /></br>
+            <input type="text" name="alcohol" placeholder="alcohol" required="required" /></br>
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary btn-block btn-large" value="Predict"/>
+         </form>
+      </div>               
+      
+   </body>
+</html>
+
+
